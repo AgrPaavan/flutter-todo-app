@@ -1,5 +1,7 @@
 # Flutter To-Do App
 
+## Version 1.0
+
 This is a simple To-Do app built with Flutter. It allows users to add tasks, mark them as completed, and delete tasks. The app uses [Hive](https://pub.dev/packages/hive) as the local database to maintain data across sessions, providing persistent storage even when the app is closed.
 
 ## Features
