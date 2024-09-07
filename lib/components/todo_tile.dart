@@ -17,49 +17,47 @@ class TodoTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Slidable(
-          endActionPane: ActionPane(
-            motion: const ScrollMotion(),
+    return Padding(
+      padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
+      child: Slidable(
+        endActionPane: ActionPane(
+          motion: const DrawerMotion(),
+          children: [
+            SlidableAction(
+              onPressed: deleteTask,
+              icon: Icons.delete,
+              backgroundColor: Colors.red.shade300,
+              borderRadius: const BorderRadius.only(
+                topRight: Radius.circular(12),
+                bottomRight: Radius.circular(12),
+              ),
+            ),
+          ],
+        ),
+        child: Container(
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Colors.yellow,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Row(
             children: [
-              SlidableAction(
-                onPressed: deleteTask,
-                icon: Icons.delete,
-                backgroundColor: Colors.red.shade300,
+              Checkbox(
+                value: taskCompleted,
+                onChanged: onChanged,
+                activeColor: Colors.black,
+                checkColor: Colors.yellow,
+              ),
+              Text(
+                taskName,
+                style: TextStyle(
+                  decoration: taskCompleted ? TextDecoration.lineThrough : null,
+                ),
               ),
             ],
           ),
-          child: Container(
-            padding: const EdgeInsets.all(24),
-            decoration: BoxDecoration(
-              color: Colors.yellow,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Row(
-              children: [
-                Checkbox(
-                  value: taskCompleted,
-                  onChanged: onChanged,
-                  activeColor: Colors.black,
-                  checkColor: Colors.yellow,
-                ),
-                Text(
-                  taskName,
-                  style: TextStyle(
-                    decoration:
-                        taskCompleted ? TextDecoration.lineThrough : null,
-                  ),
-                ),
-              ],
-            ),
-          ),
         ),
-        const Divider(
-          height: 0,
-          color: Colors.black,
-        ),
-      ],
+      ),
     );
   }
 }

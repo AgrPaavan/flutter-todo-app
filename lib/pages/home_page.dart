@@ -83,9 +83,6 @@ class _HomePageState extends State<HomePage> {
         title: const Text("TO DO"),
         elevation: 0,
         backgroundColor: Theme.of(context).primaryColor,
-        shape: const Border(
-          bottom: BorderSide(color: Colors.black, width: 1),
-        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
