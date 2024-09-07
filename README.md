@@ -20,24 +20,39 @@ This is a simple To-Do app built with Flutter. It allows users to add tasks, mar
 
 ### Clone the Repository
 
-1. Clone the repository:
+```sh
+git clone https://github.com/agrpaavan/flutter-chat-app.git
+cd chat-app
+```
 
-   ```bash
-   git clone https://github.com/AgrPaavan/flutter-todo-app.git
-   cd flutter-todo-app
-   ```
+### Install Dependencies
 
-2. Install dependencies:
+```sh
+flutter pub get
+```
 
-   ```bash
-   flutter pub get
-   ```
+### Configuration
 
-3. Run the app:
+**Create `key.properties` File**:
 
-   ```bash
-   flutter run
-   ```
+- You will need this when you build your app to sign the APK.
+- Inside the `android/` folder, create a file named `key.properties`.
+- Add your keystore configuration details to `key.properties`. Replace the placeholders with your actual keystore information:
+
+```properties
+storePassword=YOUR_KEYSTORE_PASSWORD
+keyPassword=YOUR_KEY_PASSWORD
+keyAlias=upload
+storeFile=C:\\Users\\paava\\upload-keystore.jks
+```
+
+### Run the App
+
+Connect an Android or IOS device or start an emulator, then run:
+
+```sh
+flutter run
+```
 
 ## APK Download and Installation
 
@@ -69,3 +84,9 @@ If you encounter any issues or have suggestions, please use the [Issue Tracker](
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/AgrPaavan/flutter-todo-app/blob/main/LICENSE) file for details.
+
+## Acknowledgments
+
+- [Flutter](https://flutter.dev/) - The framework used for building this app.
+- [Material Design](https://material.io/design) - Design system used for UI components.
+- **Tutorial**: This project was created following the tutorial by Mitch Koko. You can watch the tutorial [here](https://www.youtube.com/watch?v=mMgr47QBZWA).
