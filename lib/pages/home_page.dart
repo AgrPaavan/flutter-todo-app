@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:todo_app/components/dialog_box.dart";
+import "package:todo_app/components/my_button.dart";
 import "package:todo_app/components/todo_tile.dart";
 
 class HomePage extends StatefulWidget {
@@ -33,6 +34,34 @@ class _HomePageState extends State<HomePage> {
     Navigator.of(context).pop();
   }
 
+  void deleteTask(int index) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: Colors.yellow,
+          title: const Text("Delete Task"),
+          content: const Text("Are you sure you want to delete this task?"),
+          actions: [
+            MyButton(
+              onPressed: () => Navigator.of(context).pop(),
+              text: "Cancel",
+            ),
+            MyButton(
+              onPressed: () {
+                setState(() {
+                  todoList.removeAt(index);
+                });
+                Navigator.of(context).pop();
+              },
+              text: "Delete",
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   void createNewTask() {
     showDialog(
       context: context,
@@ -54,10 +83,13 @@ class _HomePageState extends State<HomePage> {
         title: const Text("TO DO"),
         elevation: 0,
         backgroundColor: Theme.of(context).primaryColor,
+        shape: const Border(
+          bottom: BorderSide(color: Colors.black, width: 1),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       body: ListView.builder(
         itemCount: todoList.length,
@@ -66,6 +98,7 @@ class _HomePageState extends State<HomePage> {
             taskName: todoList[index][0],
             taskCompleted: todoList[index][1],
             onChanged: (value) => checkBoxChanged(value, index),
+            deleteTask: (context) => deleteTask(index),
           );
         },
       ),
