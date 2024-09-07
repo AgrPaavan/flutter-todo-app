@@ -15,6 +15,12 @@ class _HomePageState extends State<HomePage> {
     ["Cook dinner", false],
   ];
 
+  void checkBoxChanged(bool? value, int index) {
+    setState(() {
+      todoList[index][1] = value!;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +36,7 @@ class _HomePageState extends State<HomePage> {
           return TodoTile(
             taskName: todoList[index][0],
             taskCompleted: todoList[index][1],
-            onChanged: (value) {
-              setState(() {
-                todoList[index][1] = value!;
-              });
-            },
+            onChanged: (value) => checkBoxChanged(value, index),
           );
         },
       ),
