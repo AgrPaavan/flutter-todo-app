@@ -13,36 +13,38 @@ This is a simple To-Do app built with Flutter. It allows users to add tasks, mar
 
 ## Screenshots
 
-<table style="border: 0px">
-      <tr>
-        <td>
-          <img
-            src="./assets/screenshots/home_page.png"
-            alt="Home Screen"
-            width="200"
-          />
-        </td>
-        <td>
-          <img
-            src="./assets/screenshots/new_task.png"
-            alt="Add To-Do"
-            width="200"
-          />
-        </td>
-        <td>
-          <img
-            src="./assets/screenshots/delete_task.png"
-            alt="Delete To-Do"
-            width="200"
-          />
-        </td>
-      </tr>
-      <tr style="text-align: center">
-        <td>Home Screen</td>
-        <td>Add To-Do</td>
-        <td>Delete To-D0</td>
-      </tr>
-    </table>
+<div align="center">
+  <table style="border: 0px">
+    <tr>
+      <td>
+        <img
+          src="./assets/screenshots/home_page.png"
+          alt="Home Screen"
+          width="200"
+        />
+      </td>
+      <td>
+        <img
+          src="./assets/screenshots/new_task.png"
+          alt="Add To-Do"
+          width="200"
+        />
+      </td>
+      <td>
+        <img
+          src="./assets/screenshots/delete_task.png"
+          alt="Delete To-Do"
+          width="200"
+        />
+      </td>
+    </tr>
+    <tr style="text-align: center">
+      <td>Home Screen</td>
+      <td>Add To-Do</td>
+      <td>Delete To-D0</td>
+    </tr>
+  </table>
+</div>
 
 ### Prerequisites
 
