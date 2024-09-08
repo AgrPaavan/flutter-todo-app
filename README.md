@@ -11,7 +11,38 @@ This is a simple To-Do app built with Flutter. It allows users to add tasks, mar
 - **Delete To-Do**: Remove tasks from the list when they are no longer needed.
 - **Persistent Storage**: All tasks are stored locally using Hive, ensuring that data remains intact across app sessions.
 
-## Installation
+## Screenshots
+
+<table style="border: 0px">
+      <tr>
+        <td>
+          <img
+            src="./assets/screenshots/home_page.png"
+            alt="Home Screen"
+            width="200"
+          />
+        </td>
+        <td>
+          <img
+            src="./assets/screenshots/new_task.png"
+            alt="Add To-Do"
+            width="200"
+          />
+        </td>
+        <td>
+          <img
+            src="./assets/screenshots/delete_task.png"
+            alt="Delete To-Do"
+            width="200"
+          />
+        </td>
+      </tr>
+      <tr style="text-align: center">
+        <td>Home Screen</td>
+        <td>Add To-Do</td>
+        <td>Delete To-D0</td>
+      </tr>
+    </table>
 
 ### Prerequisites
 
