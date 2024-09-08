@@ -41,7 +41,7 @@ This is a simple To-Do app built with Flutter. It allows users to add tasks, mar
     <tr style="text-align: center">
       <td>Home Screen</td>
       <td>Add To-Do</td>
-      <td>Delete To-D0</td>
+      <td>Delete To-Do</td>
     </tr>
   </table>
 </div>
